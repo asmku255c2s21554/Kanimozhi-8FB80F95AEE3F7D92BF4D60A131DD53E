@@ -1,18 +1,21 @@
-# Factorial of a number using recursion
-
-def recur_factorial(n):
-   if n == 1:
-       return n
-   else:
-       return n*recur_factorial(n-1)
-
-num = 7
-
-# check if the number is negative
-if num < 0:
-   print("Sorry, factorial does not exist for negative numbers")
-elif num == 0:
-   print("The factorial of 0 is 1")
+class Account:
+def_init_(self):
+self.balance=0
+print('Your Account is Created.')
+def deposit(self):
+amount=int(input('Enter the amount to deposit:'))
+self.balance+=amount
+print('Your New Balance =%d' %self.balance)
+def withdraw(self):
+amount=int(input('Enter the amount to withdraw:'))
+if(amount>self.balance):
+print('Insufficient Balance!')
 else:
-   print("The factorial of", num, "is", recur_factorial(num))
-  
+self.balance-=amount
+print('Your Remaining Balance =%d' %self.balance)
+def enquiry(self):
+print('Your Balance =%d' %self.balance)
+account= Account()
+account.deposit()
+account.withdraw()
+account.enquiry()
